@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sayang ❤️</title>
+    <!-- Updated fonts to Dancing Script and Poppins as requested -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Updated body font to Poppins */
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            overflow-x: hidden;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            /* Updated to sophisticated black gradient with subtle texture */
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 30%, #2d2d2d 70%, #404040 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Elegant white light overlays for depth */
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255,255,255,0.04) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        /* Added subtle texture overlay */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,0.01) 2px, rgba(255,255,255,0.01) 4px);
+            z-index: 1;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: relative;
+            animation: fadeInUp 1.5s ease-out;
+            padding: 60px 40px;
+            /* Elegant glass morphism effect */
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.05);
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 {
+            /* Updated heading font to Dancing Script for elegant script typography */
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            /* Sophisticated white to light gray gradient */
+            background: linear-gradient(45deg, #ffffff, #f5f5f5, #e5e5e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            color: #e5e5e5;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .heart-pulse {
+            display: inline-block;
+            animation: heartbeat 2s infinite;
+            font-size: 2.5rem;
+            margin: 0 15px;
+            /* Monochrome heart with subtle glow */
+            color: #ffffff;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+        }
+
+        /* Photo Gallery Section */
+        .photo-gallery {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .photo-gallery h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .polaroid-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 7px 7px 15px 7px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.1);
+            transform: rotate(-2deg);
+            transition: all 0.3s ease;
+            border-radius: 1px;
+            position: relative;
+        }
+
+        .polaroid:nth-child(2) {
+            transform: rotate(3deg);
+            margin-top: 20px;
+        }
+
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2), 0 6px 15px rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+
+        .polaroid img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            border-radius: 1px;
+        }
+
+        .polaroid-caption {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2rem;
+            color: #fdda8f;
+            font-weight: 500;
+        }
+
+        /* Mobile responsive for polaroids */
+        @media (max-width: 768px) {
+            .photo-gallery {
+                padding: 40px 0;
+            }
+
+            .photo-gallery h2 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+
+            .polaroid-container {
+                gap: 15px;
+            }
+
+            .polaroid {
+                padding: 12px 12px 40px 12px;
+                transform: rotate(-1deg);
+            }
+
+            .polaroid:nth-child(2) {
+                transform: rotate(2deg);
+                margin-top: 15px;
+            }
+
+            .polaroid img {
+                width: 200px;
+                height: 160px;
+            }
+
+            .polaroid-caption {
+                font-size: 1.1rem;
+                bottom: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .polaroid-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .polaroid {
+                padding: 10px 10px 35px 10px;
+            }
+
+            .polaroid:nth-child(2) {
+                margin-top: 0;
+            }
+
+            .polaroid img {
+                width: 180px;
+                height: 140px;
+            }
+
+            .polaroid-caption {
+                font-size: 1rem;
+                bottom: 10px;
+            }
+        }
+
+        /* Date Info Section */
+        .date-info {
+            padding: 100px 0;
+            /* Subtle gray background with texture */
+            background: linear-gradient(to bottom, #fafafa, #f5f5f5);
+            position: relative;
+        }
+
+        /* Added subtle pattern overlay */
+        .date-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(0,0,0,0.02) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(0,0,0,0.02) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .date-card {
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            /* Enhanced shadow for depth */
+            box-shadow: 
+                0 25px 50px rgba(0,0,0,0.08),
+                0 10px 20px rgba(0,0,0,0.04);
+            margin-bottom: 40px;
+            animation: slideInLeft 1.2s ease-out;
+            /* Subtle border for definition */
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 1;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .date-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 
+                0 35px 70px rgba(0,0,0,0.12),
+                0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        .date-card h2 {
+            /* Updated to Dancing Script for elegant script headings */
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            letter-spacing: -0.01em;
+        }
+
+        /* Sophisticated underline accent */
+        .date-card h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, #1a1a1a, #666666, #1a1a1a);
+            border-radius: 2px;
+        }
+
+        .date-details {
+            font-size: 1.2rem;
+            color: #555555;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .date-details strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* Agenda Section */
+        .agenda {
+            padding: 100px 0;
+            /* Clean white to light gray gradient */
+            background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+            position: relative;
+        }
+
+        .agenda h2 {
+            text-align: center;
+            /* Updated to Dancing Script for elegant script typography */
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 60px;
+            animation: fadeIn 1.2s ease-out;
+            position: relative;
+            letter-spacing: -0.01em;
+        }
+
+        /* Refined underline accent */
+        .agenda h2::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(90deg, #1a1a1a, #666666, #1a1a1a);
+            border-radius: 3px;
+        }
+
+        .agenda-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .agenda-item {
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            /* Enhanced shadows for premium feel */
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.06),
+                0 8px 16px rgba(0,0,0,0.04);
+            transition: all 0.4s ease;
+            animation: slideInUp 1.2s ease-out;
+            /* Subtle border */
+            border: 1px solid rgba(0,0,0,0.04);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Elegant top accent line */
+        .agenda-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1a1a1a, #666666, #1a1a1a);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .agenda-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .agenda-item:hover {
+            transform: translateY(-12px);
+            box-shadow: 
+                0 30px 60px rgba(0,0,0,0.1),
+                0 12px 24px rgba(0,0,0,0.06);
+            border-color: rgba(0,0,0,0.08);
+        }
+
+        .agenda-icon {
+            font-size: 4.5rem;
+            margin-bottom: 25px;
+            display: block;
+            /* Monochrome icons with subtle styling */
+            filter: grayscale(100%) contrast(1.2);
+            opacity: 0.8;
+            transition: all 0.4s ease;
+        }
+
+        .agenda-item:hover .agenda-icon {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .agenda-item h3 {
+            /* Updated to Dancing Script for consistent script typography */
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+
+        .agenda-item p {
+            color: #555555;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        /* Location Section */
+        .location {
+            padding: 100px 0;
+            /* Deep black background with subtle variations */
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Sophisticated light overlays */
+        .location::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(255,255,255,0.03) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(255,255,255,0.02) 0%, transparent 50%);
+        }
+
+        .location h2 {
+            /* Updated to Dancing Script */
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            animation: fadeIn 1.2s ease-out;
+            position: relative;
+            z-index: 2;
+            letter-spacing: -0.01em;
+        }
+
+        /* White accent line for contrast */
+        .location h2::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(90deg, #ffffff, #cccccc, #ffffff);
+            border-radius: 3px;
+        }
+
+        .location-details {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            color: #e5e5e5;
+            position: relative;
+            z-index: 2;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .location-details strong {
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        /* Elegant map placeholder with better styling */
+        .map-placeholder {
+            background: rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 80px 40px;
+            margin: 50px 0;
+            border: 2px dashed rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .map-placeholder:hover {
+            background: rgba(255,255,255,0.12);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        .map-placeholder p {
+            color: #cccccc;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            /* Subtle gradient background */
+            background: linear-gradient(to bottom, #fafafa, #f0f0f0);
+            text-align: center;
+            position: relative;
+        }
+
+        /* Added texture overlay */
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(0,0,0,0.02) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0,0,0,0.02) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .cta h2 {
+            /* Updated to Dancing Script */
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.01em;
+        }
+
+        /* Elegant underline */
+        .cta h2::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(90deg, #1a1a1a, #666666, #1a1a1a);
+            border-radius: 3px;
+        }
+
+        .cta p {
+            font-size: 1.3rem;
+            color: #555555;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            /* Sophisticated black gradient button */
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #404040 100%);
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            /* Enhanced shadow */
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.2),
+                0 8px 16px rgba(0,0,0,0.1);
+            animation: pulse 3s infinite;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            letter-spacing: 0.5px;
+        }
+
+        /* Elegant shine effect */
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #2d2d2d 0%, #404040 50%, #555555 100%);
+            transform: translateY(-4px);
+            box-shadow: 
+                0 25px 50px rgba(0,0,0,0.25),
+                0 10px 20px rgba(0,0,0,0.15);
+            border-color: rgba(255,255,255,0.1);
+        }
+
+        /* Dress Code Section */
+        .dress-code {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, #f8f8f8, #f0f0f0);
+            position: relative;
+        }
+
+        .dress-code::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(0,0,0,0.01) 2px, rgba(0,0,0,0.01) 4px);
+            z-index: 1;
+        }
+
+        .dress-code h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1a1a1a;
+            position: relative;
+            z-index: 2;
+        }
+
+        .dress-code h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #1a1a1a, #666666);
+            border-radius: 2px;
+        }
+
+        .dress-code-card {
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .dress-code-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .dress-code-image {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin: 30px auto;
+            display: block;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .dress-code-image:hover {
+            transform: scale(1.02);
+        }
+
+        .dress-code-card p {
+            font-size: 1.2rem;
+            color: #555555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.03);
+            }
+        }
+
+        /* Floating Hearts */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .heart {
+            position: absolute;
+            /* Monochrome hearts with subtle glow */
+            color: rgba(255,255,255,0.8);
+            font-size: 20px;
+            animation: float 8s infinite linear;
+            opacity: 0.4;
+            filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.4;
+            }
+            90% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px; /* Reduced padding for more compact mobile */
+            }
+
+            /* Mobile-optimized hero section */
+            .hero {
+                min-height: 90vh; /* Reduced height for more compact mobile */
+                padding: 15px 0;
+            }
+
+            .hero-content {
+                padding: 25px 15px; /* More compact padding */
+                margin: 15px 0;
+                border-radius: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem; /* Smaller font for compact mobile */
+                line-height: 1.1;
+                margin-bottom: 0.8rem;
+            }
+            
+            .hero p {
+                font-size: 0.9rem; /* Smaller text for compact mobile */
+                margin-bottom: 1.5rem;
+                line-height: 1.5;
+            }
+
+            .heart-pulse {
+                font-size: 1.8rem; /* Smaller heart for compact mobile */
+                margin: 0 8px;
+            }
+
+            /* Mobile-optimized sections */
+            .date-info, .agenda, .location, .cta, .dress-code, .photo-gallery {
+                padding: 40px 0; /* Reduced section padding for compact mobile */
+            }
+            
+            .date-card, .agenda-item, .dress-code-card, .polaroid {
+                padding: 20px 15px; /* More compact card padding */
+                border-radius: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .agenda-grid {
+                grid-template-columns: 1fr;
+                gap: 20px; /* Reduced gap for compact mobile */
+                margin-top: 30px;
+            }
+
+            /* Mobile typography adjustments */
+            .date-card h2, .agenda h2, .location h2, .cta h2, .dress-code h2, .photo-gallery h2 {
+                font-size: 1.8rem; /* Smaller headings for compact mobile */
+                margin-bottom: 20px;
+            }
+
+            .date-card h2::after, .agenda h2::after, .location h2::after, .cta h2::after, .dress-code h2::after, .photo-gallery h2::after {
+                width: 60px; /* Smaller underline for compact mobile */
+                height: 2px;
+                bottom: -10px;
+            }
+
+            .agenda-item h3 {
+                font-size: 1.3rem; /* Smaller subheadings for compact mobile */
+                margin-bottom: 12px;
+            }
+
+            .agenda-icon {
+                font-size: 2.5rem; /* Smaller icons for compact mobile */
+                margin-bottom: 15px;
+            }
+
+            .date-details {
+                font-size: 0.9rem; /* Smaller text for compact mobile */
+                margin-bottom: 20px;
+            }
+
+            .location-details {
+                font-size: 1rem; /* Smaller location text for compact mobile */
+                margin-bottom: 30px;
+            }
+
+            .cta p {
+                font-size: 1rem; /* Smaller CTA text for compact mobile */
+                margin-bottom: 30px;
+            }
+
+            /* Mobile-optimized button */
+            .btn-primary {
+                padding: 12px 25px; /* More compact button for mobile */
+                font-size: 0.9rem;
+                border-radius: 30px;
+                display: block;
+                width: fit-content;
+                margin: 0 auto;
+            }
+
+            /* Mobile map placeholder */
+            .map-placeholder {
+                padding: 40px 15px; /* More compact map placeholder */
+                margin: 30px 0;
+                border-radius: 12px;
+            }
+
+            .map-placeholder p {
+                font-size: 0.9rem;
+            }
+
+            /* Added dress code mobile styles */
+            .dress-code-image {
+                max-width: 280px;
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                margin: 20px auto;
+                display: block;
+            }
+
+            .dress-code-card p {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+
+            /* Reduce floating hearts on mobile for performance */
+            .heart {
+                font-size: 14px; /* Smaller floating hearts for compact mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem; /* Even smaller for very compact mobile */
+            }
+
+            .hero p {
+                font-size: 0.85rem;
+            }
+
+            .date-card, .agenda-item, .dress-code-card, .polaroid {
+                padding: 18px 12px; /* Very compact padding */
+            }
+
+            .date-card h2, .agenda h2, .location h2, .cta h2, .dress-code h2, .photo-gallery h2 {
+                font-size: 1.6rem; /* Smaller headings for very compact mobile */
+            }
+
+            .agenda-icon {
+                font-size: 2.2rem;
+            }
+
+            .btn-primary {
+                padding: 10px 20px; /* Very compact button */
+                font-size: 0.85rem;
+            }
+
+            .location-details {
+                font-size: 0.9rem;
+            }
+
+            .map-placeholder {
+                padding: 35px 12px;
+            }
+
+            .dress-code-image {
+                max-width: 250px; /* Smaller image for very compact mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts -->
+    <div class="floating-hearts" id="floating-hearts"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Happy Birthday Sayang! <span class="heart-pulse">♡</span></h1>
+                <p>Hari spesial untukmu telah tiba, selamat bertambah umur teman berprosesku, semakin tua pastinya semakin banyak beban pikiranmu tapi tenang sajaa aku pastii selalu menemani prosessmu dan aku pastikan selalu ada disampingmu sampai kita sama-sama sukses nanti bahkan kalau bisa sampai tua nanti ya wkwkwk</p>
+                <div style="margin-top: 40px;">
+                    <i class="fas fa-chevron-down" style="font-size: 1.5rem; color: rgba(255,255,255,0.6); animation: bounce 2s infinite;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="photo-gallery">
+        <div class="container">
+            <h2>First Experience Kita</h2>
+            <div class="polaroid-container">
+                <div class="polaroid">
+                    <img src="MountainDate.jpg" alt="Foto kita di pantai">
+                    <div class="polaroid-caption">Mountain Date ♡</div>
+                </div>
+                <div class="polaroid">
+                    <img src="KonserDate.jpg" alt="Foto kita di pantai">
+                    <div class="polaroid-caption">Konser Date ♡</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Date Info Section -->
+    <section class="date-info">
+        <div class="container">
+            <div class="date-card">
+                <h2>Save The Date</h2>
+                <div class="date-details">
+                    <p><strong>Tanggal:</strong> 14 Agustus 2025</p>
+                    <p><strong>Waktu:</strong> 11.00 WIB</p>
+                    <!-- Enhanced location display with more details -->
+                    <p><strong>Lokasi:</strong> Icon Mall, Gresik</p>
+                    <p style="font-size: 1rem; color: #777; margin-top: 10px;">
+                        <i class="fas fa-map-marker-alt"></i> Jl. Ahmad Yani No.1, Gresik, Jawa Timur
+                    </p>
+                </div>
+                <div style="margin-top: 30px;">
+                    <i class="far fa-calendar-alt" style="font-size: 2.5rem; color: #1a1a1a; opacity: 0.7;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Agenda Section -->
+    <section class="agenda">
+        <div class="container">
+            <h2>Agenda Kencan Spesial Kita</h2>
+            <div class="agenda-grid">
+                <div class="agenda-item">
+                    <span class="agenda-icon"><i class="fas fa-camera-retro"></i></span>
+                    <h3>Photobooth Session</h3>
+                    <p>Mari kita abadikan momen indah ini dengan foto-foto lucu dan romantis di photobooth. Siapkan pose tercomelmu! Kita cobain experience baru ini heheh.</p>
+                </div>
+                <div class="agenda-item">
+                    <span class="agenda-icon"><i class="fas fa-ice-cream"></i></span>
+                    <h3>Luca Ice Cream</h3>
+                    <p>Ayo beli Ice Creaam iniii kek e enak dan tempate nyaman, aku juga mau nyobain pertama kali bersamamu HAHAHHA.</p>
+                </div>
+                <div class="agenda-item">
+                    <span class="agenda-icon"><i class="fas fa-gift"></i></span>
+                    <h3>Hadiah Spesial</h3>
+                    <p>Tentunya kalau ada ultah yaa tidak terlepas dari unboxing hadiaah lah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dress Code Section -->
+    <section class="dress-code">
+        <div class="container">
+            <h2>Dress Code</h2>
+            <div class="dress-code-card">
+                <p>Untuk kencan spesial kita, mari kita tampil casual dan nyaman seperti ini:</p>
+                <img src="Dresscode.png" alt="Dress Code - Casual outfit dengan kaos dan jeans" class="dress-code-image">
+                <p style="font-style: italic; color: #777777; font-size: 1rem;">
+                    <i class="fas fa-tshirt"></i> Casual & Comfortable - Yang penting kita nyaman dan bahagia bersama!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location">
+        <div class="container">
+            <h2><i class="fas fa-map-marker-alt"></i> Icon Mall</h2>
+            <!-- Enhanced location details with more specific information -->
+            <div class="location-details">
+                <p><strong>Alamat Lengkap:</strong> Jl. Ahmad Yani No.1, Gresik, Jawa Timur 61111</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Siap untuk Bersenang-senang?</h2>
+            <p>Aku sudah tidak sabar untuk merayakan hari spesialmu bersama. Love you always! ♡</p>
+            <a href="#" class="btn-primary" onclick="showLoveMessage()">
+                <i class="fas fa-heart"></i> Aku Siap! <i class="fas fa-heart"></i>
+            </a>
+            
+            <div style="margin-top: 50px;">
+                <p style="font-size: 0.95rem; color: #888888;">
+                    <i class="fas fa-clock"></i> Jangan sampai telat ya DINOSSSSSS!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            const heartSymbols = ['♡', '♥', '🤍', '🖤'];
+            heart.innerHTML = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 4 + 6) + 's';
+            
+            const isMobile = window.innerWidth <= 768;
+            heart.style.fontSize = (Math.random() * (isMobile ? 8 : 12) + (isMobile ? 14 : 16)) + 'px';
+            
+            document.getElementById('floating-hearts').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+
+        const heartInterval = window.innerWidth <= 768 ? 4000 : 3000;
+        setInterval(createHeart, heartInterval);
+
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.agenda-item, .date-card');
+            const isMobile = window.innerWidth <= 768;
+            const elementVisible = isMobile ? 100 : 150;
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Love message function
+        function showLoveMessage() {
+            const messages = [
+                'Yay! Aku juga sudah tidak sabar untuk merayakan hari spesialmu! See you soon, sayang! ♡',
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            alert(randomMessage);
+        }
+
+        // Initialize animations on load
+        window.addEventListener('load', () => {
+            animateOnScroll();
+            
+            const initialHearts = window.innerWidth <= 768 ? 3 : 5;
+            for (let i = 0; i < initialHearts; i++) {
+                setTimeout(createHeart, i * 800);
+            }
+            
+            // Add bounce animation to chevron
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes bounce {
+                    0%, 20%, 50%, 80%, 100% {
+                        transform: translateY(0);
+                    }
+                    40% {
+                        transform: translateY(-12px);
+                    }
+                    60% {
+                        transform: translateY(-6px);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+
+        document.querySelectorAll('.agenda-item').forEach(item => {
+            item.addEventListener('click', function() {
+                this.style.transform = 'scale(0.96)';
+                setTimeout(() => {
+                    this.style.transform = window.innerWidth <= 768 ? 'translateY(0)' : 'translateY(-12px)';
+                }, 200);
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth > 768) {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.hero');
+                if (hero) {
+                    hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                }
+            }
+        });
+
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                animateOnScroll();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
